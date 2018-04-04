@@ -1,1 +1,1 @@
-# Funkcjonalnosci aplikacji FriendFinder
+# FriendFinder : Funkcjonalnosci aplikacji 
