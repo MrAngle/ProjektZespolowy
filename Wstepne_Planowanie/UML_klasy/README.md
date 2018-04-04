@@ -1,1 +1,1 @@
-Diagram klas aplikacji
+# FriendFinder : Diagram klas aplikacji
