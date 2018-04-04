@@ -1,1 +1,1 @@
-a
+Diagram klas aplikacji
