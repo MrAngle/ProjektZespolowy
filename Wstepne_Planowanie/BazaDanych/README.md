@@ -1,0 +1,1 @@
+# FriendFinder - Struktura Bazy Danych
