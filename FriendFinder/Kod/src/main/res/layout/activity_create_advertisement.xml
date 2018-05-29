@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Activity.CreateAdvertisement">
+
+    <!--  android:background="@drawable/menu_tlo2" -->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="265dp"
+                android:layout_height="200dp"
+                android:layout_marginEnd="32dp"
+
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginStart="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/indeks" />
+
+
+            <!-- wiek-->
+            <EditText
+                android:id="@+id/editWiek"
+                android:layout_width="111dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:hint="@string/notatka_Wiek"
+                android:ems="10"
+                android:inputType="textPersonName"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editImie"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:ignore="LabelFor" />
+
+            <!-- imie-->
+            <EditText
+                android:id="@+id/editImie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/notatka_Imie"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+            <!-- Gatunek -->
+            <TextView
+                android:id="@+id/textGatunek"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="136dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="136dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/notatka_Gatunek"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editImie" />
+
+            <CheckBox
+                android:id="@+id/checkPies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:onClick="checkSetPies"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Pies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textGatunek" />
+
+            <CheckBox
+                android:id="@+id/checkKot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Kot"
+                android:onClick="checkSetKot"
+
+                app:layout_constraintEnd_toStartOf="@+id/checkInne"
+                app:layout_constraintStart_toEndOf="@+id/checkPies"
+                app:layout_constraintTop_toBottomOf="@+id/textGatunek" />
+
+            <CheckBox
+                android:id="@+id/checkInne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Inne"
+                android:onClick="checkSetInne"
+
+                app:layout_constraintStart_toEndOf="@+id/checkKot"
+                app:layout_constraintTop_toBottomOf="@+id/textGatunek" />
+
+
+            <!-- Dlugosc Siersci -->
+            <TextView
+                android:id="@+id/textDlugoscSiersci"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="132dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/notatka_DlugoscSiersci"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkInne" />
+
+            <CheckBox
+                android:id="@+id/checkDlugie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Dlugie"
+                android:onClick="checkSetDlugie"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textDlugoscSiersci" />
+
+            <CheckBox
+                android:id="@+id/checkKrotkie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Krotkie"
+                android:onClick="checkSetKrotkie"
+
+                app:layout_constraintStart_toEndOf="@+id/checkSrednie"
+                app:layout_constraintTop_toBottomOf="@+id/textDlugoscSiersci" />
+
+            <CheckBox
+                android:id="@+id/checkSrednie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Srednie"
+                android:onClick="checkSetSrednie"
+
+                app:layout_constraintStart_toEndOf="@+id/checkDlugie"
+                app:layout_constraintTop_toBottomOf="@+id/textDlugoscSiersci" />
+
+            <CheckBox
+                android:id="@+id/checkBrak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Brak"
+                android:onClick="checkSetBrak"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkKrotkie"
+                app:layout_constraintTop_toBottomOf="@+id/textDlugoscSiersci" />
+
+
+            <!-- Aktywnosc -->
+            <TextView
+                android:id="@+id/textAktywnosc"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="132dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/notatka_ZapotrzebowanieNaAktywnosc"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkKrotkie" />
+
+            <CheckBox
+                android:id="@+id/checkAkWysoka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Wysoka"
+                android:onClick="checkSetAkWysoka"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAktywnosc" />
+
+            <CheckBox
+                android:id="@+id/checkAkSrednia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Srednia"
+                android:onClick="checkSetAkSrednia"
+
+                app:layout_constraintStart_toEndOf="@+id/checkAkWysoka"
+                app:layout_constraintTop_toBottomOf="@+id/textAktywnosc" />
+
+            <CheckBox
+                android:id="@+id/checkAkNiska"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="94dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="94dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Niska"
+                android:onClick="checkSetAkNiska"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkAkSrednia"
+                app:layout_constraintTop_toBottomOf="@+id/textAktywnosc" />
+
+            <!-- Ruchliwosc -->
+            <TextView
+                android:id="@+id/textRuchliwosc"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="132dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/notatka_Ruchliwosc"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkAkNiska" />
+
+            <CheckBox
+                android:id="@+id/checkRuWysoka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Wysoka"
+                android:onClick="checkSetRuWysoka"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textRuchliwosc" />
+
+            <CheckBox
+                android:id="@+id/checkRuSrednia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Srednia"
+                android:onClick="checkSetRuSrednia"
+
+                app:layout_constraintStart_toEndOf="@+id/checkRuWysoka"
+                app:layout_constraintTop_toBottomOf="@+id/textRuchliwosc" />
+
+            <CheckBox
+                android:id="@+id/checkRuNiska"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="94dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="94dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Niska"
+                android:onClick="checkSetRuNiska"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkRuSrednia"
+                app:layout_constraintTop_toBottomOf="@+id/textRuchliwosc" />
+
+            <!-- Nastawienie do czlowieka -->
+            <TextView
+                android:id="@+id/textNastawienieDoCzlowieka"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="132dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/notatka_NastawienieDoCzlowieka"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkRuNiska" />
+
+            <CheckBox
+                android:id="@+id/checkCzPrzyjazne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Przyjazne"
+                android:onClick="checkSetCzPrzyjazne"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNastawienieDoCzlowieka" />
+
+            <CheckBox
+                android:id="@+id/checkCzObojetne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Obojetne"
+                android:onClick="checkSetCzObojetne"
+
+                app:layout_constraintStart_toEndOf="@+id/checkCzPrzyjazne"
+                app:layout_constraintTop_toBottomOf="@+id/textNastawienieDoCzlowieka" />
+
+            <CheckBox
+                android:id="@+id/checkCzAgresywne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="39dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="39dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Agresywne"
+                android:onClick="checkSetCzAgresywne"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkCzObojetne"
+                app:layout_constraintTop_toBottomOf="@+id/textNastawienieDoCzlowieka" />
+
+
+
+            <!-- Nastawienie do dzieci -->
+            <TextView
+                android:id="@+id/textNastawienieDoDzieci"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="132dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/notatka_NastawienieDoDzieci"
+                android:onClick="checkSetDzPrzyjazne"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkCzAgresywne" />
+
+            <CheckBox
+                android:id="@+id/checkDzPrzyjazne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Przyjazne"
+                android:onClick="checkSetDzPrzyjazne"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNastawienieDoDzieci" />
+
+            <CheckBox
+                android:id="@+id/checkDzObojetne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Obojetne"
+                android:onClick="checkSetDzObojetne"
+
+                app:layout_constraintStart_toEndOf="@+id/checkDzPrzyjazne"
+                app:layout_constraintTop_toBottomOf="@+id/textNastawienieDoDzieci" />
+
+            <CheckBox
+                android:id="@+id/checkDzAgresywne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="39dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="39dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Agresywne"
+                android:onClick="checkSetDzAgresywne"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkDzObojetne"
+                app:layout_constraintTop_toBottomOf="@+id/textNastawienieDoDzieci" />
+
+
+            <!-- Nastawienie do innych zwierzat -->
+            <TextView
+                android:id="@+id/textNastawienieDoInnychZwierzat"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="132dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/notatka_NastawienieDoInnychXwierzat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkDzAgresywne" />
+
+            <CheckBox
+                android:id="@+id/checkZwPrzyjazne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Przyjazne"
+                android:onClick="checkSetZwPrzyjazne"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNastawienieDoInnychZwierzat" />
+
+            <CheckBox
+                android:id="@+id/checkZwObojetne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Obojetne"
+                android:onClick="checkSetZwObojetne"
+
+                app:layout_constraintStart_toEndOf="@+id/checkZwPrzyjazne"
+                app:layout_constraintTop_toBottomOf="@+id/textNastawienieDoInnychZwierzat" />
+
+            <CheckBox
+                android:id="@+id/checkZwAgresywne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="39dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="39dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Agresywne"
+                android:onClick="checkSetZwAgresywne"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkZwObojetne"
+                app:layout_constraintTop_toBottomOf="@+id/textNastawienieDoInnychZwierzat" />
+
+
+            <!-- Skłonności do niszczenia -->
+            <TextView
+                android:id="@+id/textSlonnoscDoNiszczenia"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="132dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/notatka_SklonnosciDoDiszczenia"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkZwAgresywne" />
+
+            <CheckBox
+                android:id="@+id/checkNiWysoka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Wysoka"
+                android:onClick="checkSetNiWysoka"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textSlonnoscDoNiszczenia" />
+
+            <CheckBox
+                android:id="@+id/checkNiSrednia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Srednia"
+                android:onClick="checkSetNiSrednia"
+
+                app:layout_constraintStart_toEndOf="@+id/checkNiWysoka"
+                app:layout_constraintTop_toBottomOf="@+id/textSlonnoscDoNiszczenia" />
+
+            <CheckBox
+                android:id="@+id/checkNiNiska"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="94dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="94dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Niska"
+                android:onClick="checkSetNiNiska"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkNiSrednia"
+                app:layout_constraintTop_toBottomOf="@+id/textSlonnoscDoNiszczenia" />
+
+
+            <!-- Stopien Uczulania -->
+            <TextView
+                android:id="@+id/textStopienUczulania"
+                android:layout_width="220dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="132dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="132dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/notatka_StopienUczulania"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkNiNiska" />
+
+            <CheckBox
+                android:id="@+id/checkUczWysoki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Wysoki"
+                android:onClick="checkSetUczWysoki"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textStopienUczulania" />
+
+            <CheckBox
+                android:id="@+id/checkUczSredni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Sredni"
+                android:onClick="checkSetUczSredni"
+
+                app:layout_constraintStart_toEndOf="@+id/checkUczWysoki"
+                app:layout_constraintTop_toBottomOf="@+id/textStopienUczulania" />
+
+            <CheckBox
+                android:id="@+id/checkUczNiski"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="94dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="94dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/notatka_Niski"
+                android:onClick="checkSetUczNiski"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkUczSredni"
+                app:layout_constraintTop_toBottomOf="@+id/textStopienUczulania" />
+
+            <!-- Miesięczny koszt utrzymania -->
+            <TextView
+                android:id="@+id/textKoszt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:text="@string/notatka_MiesiecznyKosztUtrzymania"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkUczNiski" />
+
+            <EditText
+                android:id="@+id/editKoszt"
+                android:layout_width="111dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/notatka_Kwota"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkUczNiski" />
+
+
+            <!-- Przebyte lub aktualne choroby -->
+            <TextView
+                android:id="@+id/textChoroby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:text="@string/notatka_PrzebyteLubAktualneChoroby"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editKoszt" />
+
+            <EditText
+                android:id="@+id/editChoroby"
+                android:layout_width="336dp"
+                android:layout_height="300dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textChoroby" />
+
+            <!-- Opis -->
+            <TextView
+                android:id="@+id/textOpis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:text="@string/notatka_Opis"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editChoroby" />
+
+            <EditText
+                android:id="@+id/editOpis"
+                android:layout_width="336dp"
+                android:layout_height="300dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textOpis" />
+
+            <Button
+                android:id="@+id/buttonGotowe"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="16dp"
+                android:text="Gotowe "
+                android:textStyle="bold"
+                android:onClick="clickGotowe"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/editOpis"
+                 />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>
